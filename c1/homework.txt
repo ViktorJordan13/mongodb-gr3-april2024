@@ -1,0 +1,11 @@
+1. Probajte da napravite account na https://www.mongodb.com/cloud/atlas/register
+2. Probajte da napravite cluster i da mu dodadete access od sekade
+
+Lokalno: (preku terminal(cmd) i mongosh)
+1. Make a new DB - books, students, cars...
+2. Make a collection
+3. Make 5 documents
+    - insertOne() x 2
+    - insertMany ({}, {}, {}) x1
+4. Print documents on screen
+BONUS: sort documents by "name, author, carModel" in alphabetical order

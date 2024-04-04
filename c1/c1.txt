@@ -1,0 +1,57 @@
+Types of databases
+
+1. Relational DBs can be associated as tables - najcesto koristat SQL
+
+- primary key (primaren kluc) - (unikaten kluc za vnesot (entity)) - vo nasata tabela na studenti toa ni e id
+- foreign key (stranski kluc) - kluc sto se nasleduva, povikuva od druga tabela so koja sto ovaa tabela e vo relacija
+
+Vidovi na relacii:
+
+primer: 
+- eden student moze da e zapisan samo na eden univerzitet vo odredeno vreme -> 1
+- eden student moze da slusa poveke predmeti vo odredeno vreme -> N
+
+# Relacioni databazi
+
+1. 1:N -> eden student slusa poveke kursemi (moduli)
+2. N:1 -> poveke studenti se studenti na eden univerzitet
+3. 1:1 -> 1 licnost moze da e vo brak samo so uste 1 druga licnost 
+4. N:N -> poveke studenti slusaat poveke kursevi
+
+2. Non-relational databases
+
+- Dokumenti (documents) predstavuvaat eden red vo tabelata - {}
+- Kolekcii (collections) - grupa od eden ili poveke dokumenti { {}, {} }
+- Baza na podatoci { Database } - grupa od edna ili poveke kolekcii { { {}, {} }, { {} } }
+
+- Baza na podatoci -> niza od kolekcii -> niza od dokumenti
+- Nerelacionite bazi na podatoci gi skladiraat podatocite kako fajlovi
+
+database {
+    [collections] {
+        [documents]
+    }
+}
+
+- Eden podatok sto go vmetnuvame vo baza vo forma na JSON vo nerelacionite databazi ni predstavuva eden dokument
+- MongoDB raboti so BSON - binary JSON
+
+Instalacija na:
+
+-> MongoDB - https://www.mongodb.com/docs/manual/installation/ - mongo databaza + MongoDB Compass
+-> mongosh - https://www.mongodb.com/docs/mongodb-shell/install/ - shell so koja ke rabotime i so koja ke pristapuvame i koristime query-es direkno vo terminal (za vezba i objasnuvanje)
+
+Link za online db: https://www.mongodb.com/cloud/atlas/register
+
+Cloud{
+    [Projects]{
+        [Clusters]{
+            [databases]{
+                [collections]{
+                    [documents]
+                }
+            }
+        }
+    }
+}
+

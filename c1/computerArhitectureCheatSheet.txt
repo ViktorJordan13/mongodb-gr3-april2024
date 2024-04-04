@@ -1,0 +1,19 @@
+1. User Application: the topmost layer consisting of software applications with which users 
+directly interact, such as web browsers, games, and other applications ->
+
+-> 2. Shell: user interface that allows for communication with the OS (operating system). This
+can be a command-line interface (CLI) or a graphical user interface (GUI) ->
+
+-> 3. Operating System (OS) Services and Utilites: examples: file managment system,
+ networking system - system services that apps and the system use ->
+
+-> 4. Kernel: - the core of the Operating System, responsible for managing the system resources
+like CPU, memory (RAM) and device I/O. The kernel acts as an intermidiary between the hardware and 
+the software layers. ->
+
+-> 5. Drivers: Situated just above the hardware, drivers are a special type of software that allow
+the OS and applications to communicate with hardware devices. ->
+
+-> 6. Hardware: the physical components of a computer, such as the processor (CPU), memory(RAM),
+storage device (HDD, SSD), input/output devices (keyboard, mouse, speakers, display) and other 
+periphera devices

@@ -1,0 +1,44 @@
+- show dbs
+- use appdb
+- cls (clear screen)
+- show collecions
+- db.dropDatabase()
+- exit
+- db
+- db.users.find() - NE E ISTATA FUNKCIJA od JavaScript, tuka toa ni prestavuva getAll (ni gi vraka site podatoci)
+- db.users.insertOne()
+- db.users.insertMany()
+- db.users.countDocuments()
+- db.users.updateOne()
+- db.users.updateMany()
+*** Update vi e PATCH (go ostava objektot takov kako sto si e, samo parcijalno go menuva)
+- db.users.replaceOne()
+- db.users.replaceMany()
+*** Replace vi e PUT (go brise cel prethoden objekt i gi zamenuva podatocite so tie so sakame da go editirame)
+- db.users.deleteOne()
+- db.users.deleteMany()
+- db.countDocuments()
+
+#OPERATORS
+
+$eq - equal
+$ne - not
+$gt - greater than
+$gte - greater than or equal
+$lt - less than
+$lte - less than or equal
+$exists - checks if the entry exists
+$in - checks if the entry is in some collection
+$nin - not in
+$not - negacija
+$and - i
+$or - ili 
+
+
+$expr - expression (slozen izraz)
+$set - postavuva nesto vo zavisnost od sto ke napiseme
+$inc - increment
+$rename - smeni go imeto na parametarot, na poleto, atributot (ne na vrednosta)
+$unset - napravi ja vrednosta da bide null
+$push - push na niza, dodava elementi na nizata
+$pull - pull na niza, trga element od nizata
