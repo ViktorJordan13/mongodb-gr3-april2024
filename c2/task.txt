@@ -1,0 +1,13 @@
+Od toa so vi bese za domasna:
+
+1. Najdete gi site studenti, users, people
+2. Najdete edno entity so odredeno ime
+3. Najdete gi site sto se postari od 20 godini
+4. Najdete gi site sto se pomladi od 18 godini
+5. Najdete 2 vnesa sto se so ist broj na godini
+6. Kreirajte 5 novi vnesa sto site imaat 5 godini
+
+//Site da bidat izvrseni samo so edna komanda!
+
+BONUS: konektirajte se na cloud clusterot sto go napravivte, dodadete gi podatocite
+(racno ili so import na json fajl), i komandite izvrsete gi tamu

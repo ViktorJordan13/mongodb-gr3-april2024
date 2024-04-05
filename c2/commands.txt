@@ -1,0 +1,37 @@
+- Operators are denoted with $ sign
+
+-$set - for update
+-$ne - not equal - ({name: {$ne "MyName"}})
+-$eq - equal - ({name: {$eq "MyName"}})
+-db.students.find - IT IS NOT THE SAME find() as in JAVASCRIPT
+-$lt - less than <
+-$lte - less than or equal <=
+-$gt - greater than >
+-$gte - greater than or equal >=
+-$in - requires array of matches - db.students.find({ name: {$in: ["Jenny", "Ana"]}})
+-$nin - negates $in - excludes the matches in the array
+
+### Logical Operators
+- $and
+- $or
+- $not
+- $nor
+
+
+###Sorting:
+- db.students.find().sort ({ gpa: -1 or 1}).limit(1)
+- 1 or true for ascending Sorting
+- -1 or false for descending sorting
+
+
+Povrzuvanje so cluster:
+    Preku shell (vo terminal odnosno cmd):
+        1. mongosh "mongodb+srv://test:123@cluster0.ju5trle.mongodb.net"
+    
+    Vo MongoDB Compass:
+        1. New connection
+        2. mongodb+srv://test:123@cluster0.glpgzlj.mongodb.net
+        3. Connect
+
+npm init -y
+npm i mongoose
