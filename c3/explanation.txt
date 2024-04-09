@@ -57,3 +57,9 @@ Index.js
         - db.users.deleteOne({_id: id})
     2. deleteMany 0 brisi poveke entities (dokumenti)
         - db.users.deleteMany({email: "test@gmail.com"})
+
+
+// GET - nisto
+// POST - body
+// DELETE - id
+// PUT, PATCH - id + body 
