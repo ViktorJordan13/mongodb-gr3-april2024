@@ -1,0 +1,59 @@
+- Model
+    - gi koristime da kreirame shemi
+    - tie shemi gi vrzuvame za nekoja kolekcija
+    primer: mongoose.model("Account", accountSchema, "account") - semata mi e <accountSchema>
+    so imeto <Account> ja vrzuvame na kolekcijata <account>
+    - CRUD funkcionalnosti i nivnite metodi pri rabota so MongoDB:
+        1. GET - ne ni treba telo(body) i se povikuva Account.find({})
+        2. POST - imame telo i ni treba da kreirame nov objekt (dokument) - nov Account
+        za da go zacuvame novo kreiraniot accout.save()
+        3. PUT, PATCH - imame telo(body) koe moze da bide parcijalno(PATCH) ili celosno (PUT), ni treba
+        id za da znaeme koj account ke go updatirame, i telo kade ke se apliciraat novite vrednosti
+        4. DELETE - imame id za da najdeme koj account sakame da go izbriseme od baza
+
+-Controller
+    //req.body, req.query, req.params
+    - Vo kontrolerite (handlers) imate funkcii koi komuniciraat so modelot preku browser, odnosno
+    preku HTTP (HTTPS) protokolot so pomos na REQUEST i RESPONSE
+    1. GET - nema telo i samo si ja povikuva funkcijata od modelot asinhrono
+    2. POST - imame telo koe go zemame od req.body i ja povikuvame funkcijata create od modelot
+    3. PUT - imame telo i imame params (ni go sodrzat i id-to) i spored toa gi isprakame na modelot
+    ovie parametri i koristime Account.updateOne({_id: req.params.id}, req.body)
+    4. DELETE - imame id vo params i spored toa go preprakame request-ot do modelot do funckijata DELETE
+    i se koristi Account.deleteOne({ _id: req,params.id})
+
+Index.js
+
+    - Tuka gi povikuvame ovie endpoint-ti t.e. ruti za da pravime manipulacija bidejki nema vo
+    ovaa aplikacija da imame VIEW - za toa ke go koristime POSTMAN
+
+- Komandite koi dosega gi pominavme i ke ni trebaat ovde:
+
+1. READ
+    1. findOne - najdi edno entry (dokument)
+        - go vrakja prviot koj go naoga vo bazata sto go ispolnuva uslovot (filterot)
+    2. find - gi vrakja site (getAll)
+
+2. CREATE 
+    //Vaka go koristevme vo shell i racno koga vnesuvavme
+    1. insertOne - vmetnuvame edno entity vo baza
+        db.users.insertOne ({name: "Test", age: 30})
+    2. insertMany - niza od entities koi gi vmetnuvame
+        db.users.insertOne ([{name: "Test", age: 30}, { name: "Test2", age: 35}])
+    //Vaka ke go koristime prakticno koga ke pisuvame kod
+        ova malku razlicni ke go upotrebuvame prakticno koga ke pisuvame kod
+        const user = new User (data);
+        return await user.save();
+
+3. UPDATE
+    1. updateOne - azuriranje na edno entity (dokument)
+        db.users.updateOne ({ name: "Test"}, {name: "Test Changed"}) - ova menuva samo eden so name Test
+    2. updateMany - azuriranje na poveke entities (dokumenti)
+        db.users.updateMany ({ name: "Test"}, {name: "Test changed"}) - ova gi menuva site so name Test
+
+
+4. DELETE
+    1. deleteOne - brisi edno entity (dokument)
+        - db.users.deleteOne({_id: id})
+    2. deleteMany 0 brisi poveke entities (dokumenti)
+        - db.users.deleteMany({email: "test@gmail.com"})
